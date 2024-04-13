@@ -26,6 +26,8 @@
 
 <style>
 	header {
+		position: relative;
+		z-index: 90;
 		background-color: #112448;
 		display: flex;
 		flex-direction: column;
@@ -52,11 +54,18 @@
 		font-weight: 400;
 	}
 	nav {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 100%;
+		background-color: inherit;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 0.5rem;
+		padding: 1rem 0;
 	}
 	a {
+		padding: 1rem 2rem;
 		text-decoration: none;
 		color: white;
 		font-size: larger;
