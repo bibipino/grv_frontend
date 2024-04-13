@@ -2,7 +2,16 @@
 	import ContactForm from '../components/ContactForm.svelte';
 </script>
 
-<img src="http://51.38.126.8/wp-content/uploads/2022/02/Prova-2.png" alt="Il Regno Supremo" />
+<div id="cover">
+	<img
+		id="main_image"
+		src="http://51.38.126.8/wp-content/uploads/2022/02/Prova-2.png"
+		alt="Il Regno Supremo"
+	/>
+	<div id="arrow">
+		<img src="../icons/down_arrow.svg" alt="arrow" />
+	</div>
+</div>
 <div class="content">
 	<section>
 		<div class="title">Descrizione</div>
@@ -31,7 +40,6 @@
 			</p>
 		</div>
 	</section>
-
 	<section id="about">
 		<div class="title">Chi Siamo</div>
 		<div class="text">
@@ -57,7 +65,7 @@
 				<img src="/icons/insta.png" alt="instagram" />
 			</a>
 			<a href="#insta" class="social">
-				<img src="/icons/insta.png" alt="instagram" />
+				<img src="/icons/discord.png" alt="discord" />
 			</a>
 			<a href="#insta" class="social">
 				<img src="/icons/insta.png" alt="instagram" />
@@ -88,7 +96,30 @@
 </div>
 
 <style>
-	img {
+	#arrow {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(0, 14, 255, 0) 100%);
+		padding-top: 5rem;
+		padding-bottom: 1rem;
+	}
+
+	#arrow:hover {
+		background: linear-gradient(0deg, rgba(36, 0, 2, 1) 0%, rgba(0, 14, 255, 0) 100%);
+	}
+
+	#arrow img {
+		height: 3rem;
+		width: 5rem;
+	}
+	#cover {
+		width: 100%;
+	}
+	img#main_image {
 		width: 100%;
 		height: 100vh;
 		object-fit: cover;
