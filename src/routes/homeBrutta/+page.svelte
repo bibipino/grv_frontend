@@ -1,8 +1,8 @@
-<script>
+<!-- <script>
 	import ContactForm from '../components/ContactForm.svelte';
-</script>
+</script> -->
 
-<div id="cover">
+<!-- <div id="cover">
 	<img
 		id="main_image"
 		src="http://51.38.126.8/wp-content/uploads/2022/02/Prova-2.png"
@@ -74,9 +74,9 @@
 				<img src="/icons/insta.png" alt="instagram" />
 			</a>
 		</div>
-	</section>
+	</section> -->
 
-	<!-- <section id="contact">
+<!-- <section id="contact">
 		<div class="title center">Social</div>
 		<div class="social_container">
 			<a href="#insta" class="social">
@@ -93,7 +93,7 @@
 			</a>
 		</div>
 	</section> -->
-</div>
+<!-- </div>
 
 <style>
 	#arrow {
@@ -171,4 +171,4 @@
 		height: 4rem;
 		width: 4rem;
 	}
-</style>
+</style> -->
