@@ -1,4 +1,10 @@
-<script>
+<script lang="ts">
+	const socialIcons = [
+		'/icons/insta.png',
+		'/icons/arrow.png',
+		'/icons/insta.png',
+		'/icons/insta.png'
+	];
 </script>
 
 <div class="fixed top-0 z-10 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0"></div>
@@ -38,7 +44,7 @@
 		<div class="mx-auto w-full max-w-[1920px]">
 			<div class="text-16 font-semibold md:text-[8rem]">La Nostra</div>
 			<div
-				class="w-fit bg-gradient-to-r from-white to-rosa bg-clip-text text-[4rem] font-semibold leading-none text-transparent md:text-[8rem]"
+				class="text-16 w-fit bg-gradient-to-r from-white to-rosa bg-clip-text font-semibold leading-none text-transparent md:text-[8rem]"
 			>
 				Storia
 			</div>
@@ -47,11 +53,11 @@
 				<div class="relative flex w-full justify-end">
 					<img
 						class="absolute h-full w-full object-cover"
-						src="/img/larp.jpeg"
+						src="/img/larp1.jpeg"
 						alt="immagine base"
 					/>
 					<div class="p-8 backdrop-blur-lg lg:mb-[10%] lg:w-[60%] lg:p-16">
-						<p class="text-2xl lg:text-5xl">Descrizione</p>
+						<p class="text-2xl lg:text-5xl">Chi siamo?</p>
 						<br />
 						<p class="text-sm lg:text-xl">
 							Il Regno Supremo è un'organizzazione no-profit dedicata interamente al gioco di ruolo
@@ -71,19 +77,40 @@
 				</div>
 			</div>
 
-			<div class="flex w-full flex-row gap-4">
-				<div>
+			<div class="flex w-full gap-4">
+				<div class="flex-1">
 					<div class="text-xl">
-						<h1 class="text-3xl">Sumir</h1>
-						<div>Descirzione molto descriziosa</div>
+						<h1 class="text-2xl lg:text-5xl">Atlas</h1>
+						<div class="text-sm lg:text-xl">Personaggi dai nuovi mondi</div>
 					</div>
-					<img class="w-full min-w-0 flex-1" src="/img/sumir.jpg" alt="sumir" />
+					<img class="w-full min-w-0 flex-1" src="/img/atlas.png" alt="sumir" />
 				</div>
-				<div>
-					<img class="w-full min-w-0 flex-1" src="/img/sebby.jpg" alt="sumir" />
+				<div class="flex-1">
+					<img class="w-full min-w-0 flex-1" src="/img/orazV.png" alt="sumir" />
 					<div class="text-right text-xl">
-						<h1 class="text-3xl">Sebby</h1>
-						<div>Descirzione molto descriziosa</div>
+						<h1 class="text-2xl lg:text-5xl">Tombstone</h1>
+						<div class="text-sm lg:text-xl">Favolosi mercanti</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center">
+				<div class="inline-block pt-4">
+					<div class=" flex flex-col items-center rounded-md bg-gradient-to-b from-blu to-viola">
+						<div
+							class="bg-gradient-to-r from-giallo to-rosso bg-clip-text py-4 text-2xl font-semibold text-transparent lg:text-5xl"
+						>
+							Contattaci
+						</div>
+
+						<div class="flex min-h-0 min-w-0 flex-row justify-center gap-4 p-4">
+							{#each socialIcons as socialIcon}
+								<img
+									class="h-full max-h-32 min-h-8 w-full min-w-8 max-w-32 flex-1 p-3 hover:bg-rosso/30"
+									alt="socailIcon"
+									src={socialIcon}
+								/>
+							{/each}
+						</div>
 					</div>
 				</div>
 			</div>
