@@ -9,7 +9,7 @@
 	];
 </script>
 
-<div class="fixed top-0 z-50 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0"></div>
+<div class="fixed top-0 z-50 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0" />
 
 <div class="relative w-full">
 	<div class="-z-10 flex h-screen flex-col overflow-x-clip bg-red-800">
@@ -21,7 +21,7 @@
 	</div>
 	<div
 		class="t-0 absolute z-0 h-[700px] w-full bg-gradient-to-t from-[#020202] via-[#020202]/100 to-[#020202]/0 pt-44 backdrop-blur-sm"
-	></div>
+	/>
 </div>
 
 <!-- il margin varia in base a quanto py c'è sotto, (la linea bianca deve stare fuori) -->
