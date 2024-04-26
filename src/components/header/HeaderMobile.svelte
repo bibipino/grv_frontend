@@ -1,73 +1,37 @@
 <script lang="ts">
+	import HeaderTitle from './HeaderTitle.svelte';
+	import HeaderWrapper from './HeaderWrapper.svelte';
+
 	type Link = { name: string; href: string };
 	export let links: Link[] = [];
 
 	let open: boolean = false;
 
 	function handleClick() {
-		open = open == true ? false : true;
-		console.log(open);
+		open = !open;
 	}
 </script>
 
-<header>
-	<div id="title">
-		<h1>GRV IL REGNO SUPREMO</h1>
-		<button id="navBtn" on:click={handleClick}>nav</button>
+<HeaderWrapper>
+	<div class="flex w-full items-center justify-between">
+		<HeaderTitle />
+		<button class="text-base font-semibold text-white" on:click={handleClick}>
+			{#if open}
+				<img src="/icons/close.svg" alt="nav" />
+			{:else}
+				<img src="/icons/hamburger.svg" alt="nav" />
+			{/if}
+		</button>
 	</div>
 	{#if open}
-		<nav>
-			{#each links as link}
-				<a href={link.href}>{link.name}</a>
-			{/each}
+		<nav class="absolute left-0 top-full w-full bg-inherit">
+			<div class="flex flex-col gap-8 bg-black/20 py-4">
+				{#each links as link}
+					<a class="font-lg px-8 text-center text-white hover:text-rosso" href={link.href}>
+						{link.name}
+					</a>
+				{/each}
+			</div>
 		</nav>
 	{/if}
-</header>
-
-<style>
-	header {
-		position: relative;
-		z-index: 90;
-		background-color: #112448;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: space-between;
-		padding: 0.25rem 1rem;
-		gap: 1rem 0;
-		color: white;
-	}
-	button#navBtn {
-		background-color: transparent;
-		border: none;
-		color: white;
-		font-size: 1.5rem;
-	}
-	div#title {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	h1 {
-		font-size: 2rem;
-		font-weight: 400;
-	}
-	nav {
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 100%;
-		background-color: inherit;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		padding: 1rem 0;
-	}
-	a {
-		padding: 1rem 2rem;
-		text-decoration: none;
-		color: white;
-		font-size: larger;
-	}
-</style>
+</HeaderWrapper>
