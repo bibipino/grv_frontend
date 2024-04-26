@@ -5,5 +5,5 @@
 </script>
 
 <a href={link} target={newTab ? '_blank' : '_parent'}>
-	<img class="h-auto w-8 flex-1 hover:bg-rosso/30" alt="socailIcon" src={image} />
+	<img class="h-auto w-8 flex-1 hover:fill-rosso" alt="socailIcon" src={image} />
 </a>

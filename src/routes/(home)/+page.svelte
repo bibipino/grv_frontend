@@ -9,19 +9,24 @@
 	];
 </script>
 
-<div class="fixed top-0 z-30 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0"></div>
+<div class="fixed top-0 z-50 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0"></div>
 
-<div class="-z-10 flex h-screen flex-col overflow-x-clip bg-red-800">
-	<img
-		class="top-0 h-full w-full translate-x-[-20%] scale-[2] object-cover"
-		src="/img/Prova-2.png"
-		alt="immagine base"
-	/>
+<div class="relative w-full">
+	<div class="-z-10 flex h-screen flex-col overflow-x-clip bg-red-800">
+		<img
+			class="top-0 h-full w-full translate-x-[-20%] scale-[2] object-cover"
+			src="/img/Prova-2.png"
+			alt="immagine base"
+		/>
+	</div>
+	<div
+		class="t-0 absolute z-0 h-[700px] w-full bg-gradient-to-t from-[#020202] via-[#020202]/100 to-[#020202]/0 pt-44 backdrop-blur-sm"
+	></div>
 </div>
 
 <!-- il margin varia in base a quanto py c'è sotto, (la linea bianca deve stare fuori) -->
 <div class="sticky top-0 z-50 -mt-12 w-full backdrop-blur-sm">
-	<nav class="mx-auto px-32">
+	<nav class="mx-auto px-64">
 		<div class="flex flex-col">
 			<div class="flex flex-row justify-center gap-4">
 				<a class="flex-1 py-3 text-center hover:bg-white/30" href="/">Home</a>
@@ -36,12 +41,9 @@
 <!-- page content (including gradient) -->
 <div class="relative w-full">
 	<!-- gradient that covers the image / background split -->
-	<div
-		class="t-0 relative z-0 h-[700px] bg-gradient-to-t from-[#020202] via-[#020202]/100 to-[#020202]/0 pt-44 backdrop-blur-sm"
-	></div>
 
 	<!-- page content -->
-	<div class="absolute top-0 z-20 flex w-full flex-col px-[16rem] pt-[16rem]">
+	<div class="z-20 flex w-full flex-col px-[16rem] pt-[16rem]">
 		<!-- headline -->
 		<div class="mx-auto w-full max-w-[1920px]">
 			<div class="text-16 font-semibold md:text-[8rem]">La Nostra</div>
