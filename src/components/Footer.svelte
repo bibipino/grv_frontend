@@ -1,13 +1,3 @@
-<footer>
+<footer class="flex justify-center bg-gradient-to-r from-blu to-viola px-4 py-2 backdrop-blur-sm">
 	<p>By Bibipino with ❤️</p>
 </footer>
-
-<style>
-	footer {
-		background-color: rgb(17, 36, 100);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.5rem;
-	}
-</style>

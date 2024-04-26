@@ -9,9 +9,7 @@
 		{ name: 'Home', href: '/' },
 		{ name: 'Manuali', href: '/manuals' },
 		{ name: 'Schede', href: '/schede' },
-		{ name: 'Galleria', href: '/album' },
-		{ name: 'About', href: '/#about' },
-		{ name: 'Contattaci', href: '/#contact' }
+		{ name: 'Galleria', href: '/album' }
 	];
 </script>
 

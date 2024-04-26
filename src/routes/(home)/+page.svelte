@@ -2,14 +2,14 @@
 	import SocialLink from '$components/SocialLink.svelte';
 
 	const socials = [
-		{ image: '/icons/insta.png', link: '#insta1', newTab: true },
-		{ image: '/icons/insta.png', link: '#insta2', openInNewPage: false },
-		{ image: '/icons/insta.png', link: '#insta3', openInNewPage: false },
-		{ image: '/icons/insta.png', link: '#insta4', openInNewPage: false }
+		{ image: '/icons/instagram.svg', link: '#insta1', newTab: true },
+		{ image: '/icons/instagram.svg', link: '#insta2', openInNewPage: false },
+		{ image: '/icons/instagram.svg', link: '#insta3', openInNewPage: false },
+		{ image: '/icons/instagram.svg', link: '#insta4', openInNewPage: false }
 	];
 </script>
 
-<div class="fixed top-0 z-10 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0"></div>
+<div class="fixed top-0 z-30 h-[20%] w-full bg-gradient-to-b from-[#020202] to-[#020202]/0"></div>
 
 <div class="-z-10 flex h-screen flex-col overflow-x-clip bg-red-800">
 	<img
@@ -33,7 +33,7 @@
 		</div>
 	</nav>
 </div>
-<!-- page content (including navbar) -->
+<!-- page content (including gradient) -->
 <div class="relative w-full">
 	<!-- gradient that covers the image / background split -->
 	<div
@@ -41,7 +41,7 @@
 	></div>
 
 	<!-- page content -->
-	<div class="absolute top-0 z-20 flex w-full flex-col p-defpad">
+	<div class="absolute top-0 z-20 flex w-full flex-col px-[16rem] pt-[16rem]">
 		<!-- headline -->
 		<div class="mx-auto w-full max-w-[1920px]">
 			<div class="text-16 font-semibold md:text-[8rem]">La Nostra</div>
@@ -97,18 +97,10 @@
 			</div>
 			<div class="flex justify-center">
 				<div class="inline-block pt-4">
-					<div class=" flex flex-col items-center rounded-md bg-gradient-to-b from-blu to-viola">
-						<div
-							class="bg-gradient-to-r from-giallo to-rosso bg-clip-text py-4 text-2xl font-semibold text-transparent lg:text-5xl"
-						>
-							Contattaci
-						</div>
-
-						<div class="flex min-h-0 min-w-0 flex-row justify-center gap-4 p-4">
-							{#each socials as social}
-								<SocialLink image={social.image} link={social.link} newTab={social.newTab} />
-							{/each}
-						</div>
+					<div class="flex min-h-0 min-w-0 flex-row justify-center gap-4 pb-6 pt-defpad">
+						{#each socials as social}
+							<SocialLink image={social.image} link={social.link} newTab={social.newTab} />
+						{/each}
 					</div>
 				</div>
 			</div>

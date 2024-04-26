@@ -65,7 +65,7 @@
 	];
 </script>
 
-<div class="flex flex-col items-center">
+<div class="flex h-full flex-col items-center">
 	<h1 class="text-4xl">Manuali</h1>
 	<h3>Qui troverete i download per tutti i manuali.</h3>
 	<div id="links" class="flex w-full max-w-[65rem] flex-wrap justify-center gap-1 py-4">
